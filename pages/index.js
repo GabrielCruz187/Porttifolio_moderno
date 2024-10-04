@@ -22,7 +22,7 @@ const Home = () => {
       initial='hidden'
       animate='show'
       exit='hidden'
-      className='h1'>
+      className='h1 mb-8'>
       Transformando ideias <br />  em {''}
       <span className='text-accent'>realidade digital</span> 
       </motion.h1>
@@ -32,7 +32,7 @@ const Home = () => {
       initial='hidden'
       animate='show'
       exit='hidden'
-      className='max-w-sm mx-auto xl:max-w-xl xl:ml-0 xl-mx-0 mb-10 xl:mb-16'>
+      className='max-w-sm mx-auto xl:max-w-xl xl:ml-0 xl:mx-0 mb-16'>
        Combinando criatividade e tecnologia, desenvolvo soluções digitais que trazem ideias à vida. Como programador full stack, trabalho em cada detalhe para garantir que seus projetos sejam eficientes, inovadores e funcionais, do backend ao frontend.
       </motion.p>
       <div className="flex justify-center xl:hidden relative">
