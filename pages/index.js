@@ -20,13 +20,13 @@ const Home = () => {
         <motion.h1
           variants={fadeIn('down', 0.2)}
           initial='hidden' animate="show" exit="hidden"
-          className='h1'>Olá, eu sou Gabriel Cruz, <br /> Full Stack  {' '} <span className='text-accent'>Developer</span></motion.h1>
+          className='h1 mb-2'>Hello, I am Gabriel Cruz, <br /> Full Stack  {' '} <span className='text-accent'>Developer</span></motion.h1>
         {/* subtitle */}
         <motion.p
           variants={fadeIn('down', 0.3)}
           initial='hidden' animate="show" exit="hidden"
           className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-          Transformando ideias em soluções digitais eficazes.
+          Transforming ideas into effective digital solutions.
 
         </motion.p>
         {/* btn */}
@@ -37,6 +37,7 @@ const Home = () => {
           initial='hidden' animate="show" exit="hidden"
           className='hidden xl:flex'>
           <ProjectsBtn />
+          
         </motion.div>
       </div>
     </div>
@@ -47,16 +48,18 @@ const Home = () => {
       absolute mix-blend-color-dodge translate-z-0 
       '>
         {/* particles */}
-        <ParticlesContainer/>
+        
+        
         {/* Avatar */}
 
       </div>
+      <ParticlesContainer />
         <motion.div
         variants={fadeIn('up', 0.5)}
         initial='hidden' animate="show" exit="hidden"
         transition={{duration:1, ease: 'easeInOut'}}
         className='w-full h-full max-w-[537px] max-h-[478px] absolute -bottom-32
-        lg:bottom-0 lg:right-[8%]
+        lg:bottom-0 lg:right-[8%] 
         '>
           <Avatar/>
         </motion.div>

@@ -6,7 +6,7 @@ import 'swiper/css/pagination'
 // icons
 import {
   RxCrop,
-  RxPencil2,
+  RxBackpack,
   RxDesktop,
   RxReader,
   RxRocket,
@@ -25,7 +25,7 @@ const serviceData = [
     description: 'Criação de interfaces de usuário modernas, interativas e otimizadas para todos os dispositivos.',
   },
   {
-    icon: <RxPencil2 />,
+    icon: <RxBackpack />,
     title: 'Back-end',
     description: 'Implementação da lógica de negócios e gerenciamento de dados em servidores, de forma eficiente e segura.',
   },
@@ -36,14 +36,10 @@ const serviceData = [
   },
   {
     icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Banco de dados',
+    description: 'Envolve conectar a aplicação a um banco de dados para armazenar, gerenciar e recuperar informações de forma eficiente.',
   },
-  {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
+  
 ];
 
 const ServiceSlider = () => {

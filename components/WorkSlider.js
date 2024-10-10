@@ -15,19 +15,19 @@ const workSlides = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/one 1.png',
         },
         {
           title: 'title',
-          path: '/thumb2.jpg',
+          path: '/bemsocial.png',
         },
         {
           title: 'title',
-          path: '/thumb3.jpg',
+          path: '/calc.png',
         },
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/gestao.png',
         },
       ],
     },

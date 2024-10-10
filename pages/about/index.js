@@ -9,15 +9,14 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
+  FaPython,
+  FaNodeJs,
+  FaSass,
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+ 
 } from "react-icons/si";
 
 
@@ -27,65 +26,43 @@ const aboutData = [
     title: 'skills',
     info: [
       {
-        title: '',
+        title: 'Full stack developer',
         icons: [
           <FaHtml5 key={1} />,
           <FaCss3 key={2} />,
           <FaJs key={3} />,
           <FaReact key={4} />,
           <SiNextdotjs key={5} />,
-          <SiFramer key={6} />,
-          <FaWordpress key={7} />,
+          <FaPython key={6} />,
+          <FaNodeJs key={7} />,
+          <FaSass key={8} />,
         ],
       },
       
     ],
   },
   {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
-  {
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Freelancer ',
+        stage: '2023 - 2024',
       },
-      {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
-      },
+      
     ],
   },
   {
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'Anásile e denvolvimento de sistemas - Cruzeiro Do Sul',
+        stage: '2022 - 2024',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Full stack developer - Onbitcode',
+        stage: '2023',
       },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
+      
     ],
   },
 ];
@@ -109,40 +86,35 @@ const About = () => {
       <div className='flex-1 flex flex-col justify-center'>
         <motion.h2
           variants={fadeIn('right', 0.2)} initial="hidden" animate="show" exit="hidden"
-          className='h2'><span className='text-accent'>Habilidades que</span> transformam ideias em realidade digital.</motion.h2>
+          className='h2'>Quem <span className='text-accent'>sou</span> eu?</motion.h2>
         <motion.p
           variants={fadeIn('right', 0.4)} initial="hidden" animate="show" exit="hidden"
-          className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 '> Domino uma ampla gama de tecnologias, desde o desenvolvimento frontend envolvente até a construção de robustas soluções backend, sempre buscando inovação e eficiência em cada projeto.
+          className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 '> Sou Gabriel Cruz, tenho 21 anos e atualmente estou cursando Análise e Desenvolvimento de Sistemas. Além de meus estudos, também faço cursos complementares para expandir meus conhecimentos e atuo como freelancer em desenvolvimento web. Estou em busca do meu primeiro emprego fixo na área de tecnologia, onde posso aplicar minhas habilidades e continuar evoluindo como Full Stack Developer.
         </motion.p>
+       
+
         <motion.div
           variants={fadeIn('right', 0.6)} initial="hidden" animate="show" exit="hidden"
           className='hidden md:flex md:max-w-xl xl:max-none mx-auto xl:mx-0 mb-8'>
           <div className='flex flex-1 xl:gap-x-6 '>
-            {/* Experience */}
-            <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:abosulte after:top-0 after:right-0'>
+          <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
               <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <CountUp start={0} end={10} duration={5} /> +
+                <CountUp start={0} end={2} duration={5} /> +
               </div>
               <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Years of experience</div>
             </div>
 
-            <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:abosulte after:top-0 after:right-0'>
+            <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
               <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <CountUp start={0} end={250} duration={5} /> +
+                <CountUp start={0} end={70} duration={5} /> +
               </div>
               <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Satisfied clients</div>
             </div>
-            <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:abosulte after:top-0 after:right-0'>
+            <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
               <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <CountUp start={0} end={650} duration={5} /> +
+                <CountUp start={0} end={55} duration={5} /> +
               </div>
               <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Finished projects</div>
-            </div>
-            <div className='relative flex-1'>
-              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <CountUp start={0} end={8} duration={5} /> +
-              </div>
-              <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Winning awards</div>
             </div>
           </div>
         </motion.div>
@@ -190,9 +162,11 @@ const About = () => {
             </div>
           })}
         </div>
+
       </motion.div>
 
     </div>
+    
   </div>;
 };
 

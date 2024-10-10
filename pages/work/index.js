@@ -4,6 +4,7 @@ import Circles from '../../components/Circles'
 
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants'
+import ParticlesContainer from '../../components/ParticlesContainer'
 
 
 const Work = () => {
@@ -19,8 +20,10 @@ const Work = () => {
             My work <span className='text-accent'>.</span>
           </motion.h2>
           <motion.p variants={fadeIn('up', 0.4)} initial="hidden" animate="show"
-            exit="hidden" className='mb-4 max-w-[400px] mx-auto lg:mx-0'>Lorem laboris pariatur laboris minim sint tempor id dolore ullamco fugiat laboris ipsum. Ut commodo duis ex mollit excepteur nulla commodo nisi sunt do duis aute aute id.</motion.p>
+            exit="hidden" className='mb-4 max-w-[400px] mx-auto lg:mx-0'>Uma seleção de projetos que exemplificam minha paixão por desenvolvimento e design.</motion.p>
         </div>
+
+        
           {/* slider */}
         <motion.div variants={fadeIn('down', 0.6)} initial="hidden" animate="show"
             exit="hidden" className='w-full xl:max-w-[65%]'>
