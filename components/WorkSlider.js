@@ -1,60 +1,44 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper';
-import { BsArrowRight } from 'react-icons/bs';
+import 'swiper/css/navigation'; // Certifique-se de importar o CSS de navegação
+import { Pagination, Navigation } from 'swiper';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// data
+// Dados dos projetos
 const workSlides = {
   slides: [
     {
       images: [
         {
-          title: 'title',
-          path: '/one 1.png',
-          github: 'https://github.com/seuusuario/projeto1',
+          title: 'Rede social',
+          path: '/one.jpeg',
+          github: 'https://github.com/GabrielCruz187/lavagem-do-z-',
         },
         {
-          title: 'title',
-          path: '/bemsocial.png',
-          github: 'https://github.com/seuusuario/projeto2',
+          title: 'Lavajato',
+          path: '/ze.png',
+          github: 'https://github.com/GabrielCruz187/lavagem-do-z-',
         },
         {
-          title: 'title',
-          path: '/calc.png',
-          github: 'https://github.com/seuusuario/projeto3',
-        },
-        {
-          title: 'title',
-          path: '/gestao.png',
-          github: 'https://github.com/seuusuario/projeto4',
+          title: 'Plataforma de vender cursos',
+          path: '/plataforma.png',
+          github: 'https://github.com/GabrielCruz187/lavagem-do-z-',
         },
       ],
     },
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb4.jpg',
-          github: 'https://github.com/seuusuario/projeto5',
+          title: 'Outro Projeto 1',
+          path: '/projeto1.png',
+          github: 'https://github.com/GabrielCruz187/projeto1',
         },
         {
-          title: 'title',
-          path: '/thumb1.jpg',
-          github: 'https://github.com/seuusuario/projeto6',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.jpg',
-          github: 'https://github.com/seuusuario/projeto7',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
-          github: 'https://github.com/seuusuario/projeto8',
+          title: 'Outro Projeto 2',
+          path: '/projeto2.png',
+          github: 'https://github.com/GabrielCruz187/projeto2',
         },
       ],
     },
@@ -64,46 +48,24 @@ const workSlides = {
 const WorkSlider = () => {
   return (
     <Swiper
-      spaceBetween={10}
-      pagination={{ clickable: true }}
-      modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      spaceBetween={30} // Espaçamento entre os slides
+      slidesPerView={1} // Exibir um projeto por vez
+      navigation={true} // Habilita navegação por setas
+      pagination={{ clickable: true }} // Habilita a paginação
+      modules={[Pagination, Navigation]} // Inclui os módulos de paginação e navegação
+      className="h-[480px] sm:h-[480px]"
     >
       {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+            <div className="flex space-x-4">
               {slide.images.map((image, index) => {
                 return (
                   <Link key={index} href={image.github} target="_blank" rel="noopener noreferrer">
-                    <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
-                      <div className="flex items-center justify-center relative overflow-hidden group">
-                        <Image src={image.path} width={500} height={300} alt="" />
-                        {/* overlay gradient */}
-                        <div
-                          className="absolute inset-0 bg-gradient-to-l from-transparent
-                          via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"
-                        >
-                          {/* title */}
-                          <div
-                            className="w-full absolute bottom-0 translate-y-full
-                            group-hover:-translate-y-10 transition-all duration-300 group-hover:xl:-translate-y-20"
-                          >
-                            <div className="flex items-center justify-center text-center gap-x-2 text-[13px] tracking-[0.2em]">
-                              {/* title part 1 */}
-                              <div className="delay-100">LIVE</div>
-                              {/* title part 2 */}
-                              <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                                PROJECT
-                              </div>
-                              {/* icon */}
-                              <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                                <BsArrowRight />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="relative img-projet group"
+                    style={{ backgroundImage: `url(${image.path})` }}>
+                      
+                      <div className="overlay">{image.title}</div>
                     </div>
                   </Link>
                 );
@@ -112,7 +74,6 @@ const WorkSlider = () => {
           </SwiperSlide>
         );
       })}
-      Service Slider
     </Swiper>
   );
 };

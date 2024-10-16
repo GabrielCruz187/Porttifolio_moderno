@@ -1,0 +1,47 @@
+/* Estilo para o contêiner da imagem */
+.img-projet {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: top; /* Começa no topo da imagem */
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+    transition: background-position 6s linear; /* Tempo de rolagem da imagem */
+  }
+  
+  /* Efeito de hover para rolar a imagem */
+  .img-projet:hover {
+    background-position: bottom; /* Quando o mouse está sobre a imagem, ela rola até o fundo */
+  }
+  
+  /* Estilo do overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Efeito de hover no overlay */
+  .img-projet:hover .overlay {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
+  
