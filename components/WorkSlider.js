@@ -1,119 +1,86 @@
-import {Swiper, SwiperSlide} from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper';
+import Image from 'next/image';
+import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa'; // Exemplos de ícones
+import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'; // Outros ícones
 
-import 'swiper/css'
-import 'swiper/css/free-mode'
-import 'swiper/css/pagination'
-
-
-import {FreeMode, Pagination} from 'swiper'
-import { RxArrowTopRight } from 'react-icons/rx'
-
-// data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/bemsocial.png',
-        },
-        {
-          title: 'title',
-          path: '/gestao.png',
-        },
-        {
-          title: 'title',
-          path: '/calc.png',
-        },
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
-        },
-      ],
-    },
-  ],
-};
-
-import {BsArrowRight} from 'react-icons/bs'
-import Image from 'next/image'
-
+// Dados do slider
+const workSlides = [
+  {
+    title: 'Restaurante',
+    path: '/food.png',
+    link: '#',
+    description: 'Um site responsivo para um restaurante, com funcionalidades de reserva e cardápio dinâmico.',
+    techs: [<FaReact />, <SiTailwindcss />, <FaNodeJs />],
+  },
+  {
+    title: 'Snake Shop',
+    path: '/loja.png',
+    link: '#',
+    description: 'E-commerce para venda de produtos exóticos, com carrinho de compras e integração de pagamento.',
+    techs: [<FaReact />, <FaCss3Alt />],
+  },
+  {
+    title: 'Barbearia',
+    path: '/barber.png',
+    link: '#',
+    description: 'Sistema de agendamento online para barbearia, com interface amigável e agenda dinâmica.',
+    techs: [<FaReact />, <SiNextdotjs />, <FaNodeJs />],
+  },
+  {
+    title: 'Plataforma de Cursos',
+    path: '/onee.png',
+    link: '#',
+    description: 'Plataforma de vendas de cursos com suporte a múltiplos usuários e upload de aulas.',
+    techs: [<FaReact />, <FaNodeJs />, <SiTailwindcss />],
+  },
+];
 
 const WorkSlider = () => {
-  return <Swiper
-  spaceBetween={10}
-  pagination={{
-    clickable:true
-  }}
-  modules={[Pagination]}
-  className='h-[280px] sm:h-[480px]'
-  >
-    {
-      workSlides.slides.map((slide,index) =>{
-        return(
-          <SwiperSlide key={index}>
-           <div className='grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer'>
-            {slide.images.map((image,index) =>{
-              return <div key={index} className='relative rounded-lg overflow-hidden
-               flex items-center justify-center group'>
-                <div className='flex items-center justify-center relative overflow-hidden group '>
-                  <Image src={image.path} width={500} height={300} alt=''/>
-                  {/* overlay gradient */}
-                  <div className='absolute inset-0 bg-gradient-to-l from-transparent
-                  via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700
-                  '>
-                    {/* title */}
-                    <div className='w-full absolute bottom-0 translate-y-full
-                    group-hover:-translate-y-10
-                    transition-all duration-300
-                    group-hover:xl:-translate-y-20 
-                    '>
-                      <div className='flex items-center justify-center text-center gap-x-2 text-[13px] tracking-[0.2em]'>
-                        {/* title part 1 */}
-                        <div className='delay-100'>
-                          LIVE
-                          </div>
-                        {/* title part 2 */}
-                        <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>
-                          PROJECT
-                          </div>
-                        {/* icon */}
-                        <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all
-                        duration-300 delay-200
-                        '>
-                          <BsArrowRight/>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  </div>
-                </div>
-            })}
-           </div>
-          </SwiperSlide>
-        )
-      })
-}
-    Service Slider</Swiper>;
+  return (
+    <Swiper
+      spaceBetween={20} // Espaçamento entre os itens
+      slidesPerView={2} // Mostrar 2 projetos por vez
+      pagination={{ clickable: true }} // Bolinhas de navegação
+      modules={[Pagination]}
+      className="py-10 px-4 sm:px-8 lg:px-16"
+    >
+      {workSlides.map((project, index) => (
+        <SwiperSlide key={index}>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative rounded-lg overflow-hidden group"
+          >
+            {/* Imagem do Projeto */}
+            <div className="w-full h-60 sm:h-80 lg:h-96 overflow-hidden relative">
+              <Image
+                src={project.path}
+                alt={project.title}
+                width={500}
+                height={300}
+                className="absolute top-0 left-0 w-full h-auto transform group-hover:translate-y-[-100%] transition-transform duration-[2000ms] ease-in-out"
+              />
+            </div>
+
+            {/* Informações do Projeto */}
+            <div className="absolute inset-0 bg-black/70 p-4 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <h3 className="text-white text-xl font-bold mb-2">{project.title}</h3>
+              <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+              <div className="flex space-x-2 text-white text-lg">
+                {project.techs.map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
+              </div>
+            </div>
+          </a>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 };
 
 export default WorkSlider;
