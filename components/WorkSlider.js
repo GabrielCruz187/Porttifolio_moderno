@@ -3,8 +3,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper';
 import Image from 'next/image';
-import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa'; // Exemplos de ícones
-import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'; // Outros ícones
+import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaCss3, FaJs, } from 'react-icons/fa'; // Exemplos de ícones
+import { SiTailwindcss, SiNextdotjs, SiSqlalchemy, SiSqlite } from 'react-icons/si'; // Outros ícones
 
 // Dados do slider
 const workSlides = [
@@ -13,14 +13,14 @@ const workSlides = [
     path: '/food.png',
     link: '#',
     description: 'Um site responsivo para um restaurante, com funcionalidades de reserva e cardápio dinâmico.',
-    techs: [<FaReact />, <SiTailwindcss />, <FaNodeJs />],
+    techs: [<FaHtml5 />, <FaCss3 />, <FaJs />],
   },
   {
     title: 'Snake Shop',
     path: '/loja.png',
     link: '#',
     description: 'E-commerce para venda de produtos exóticos, com carrinho de compras e integração de pagamento.',
-    techs: [<FaReact />, <FaCss3Alt />],
+    techs: [<FaHtml5 />, <FaCss3Alt />, <FaJs />],
   },
   {
     title: 'Barbearia',
@@ -34,7 +34,7 @@ const workSlides = [
     path: '/onee.png',
     link: '#',
     description: 'Plataforma de vendas de cursos com suporte a múltiplos usuários e upload de aulas.',
-    techs: [<FaReact />, <FaNodeJs />, <SiTailwindcss />],
+    techs: [<FaReact />, <FaNodeJs />, <SiTailwindcss />, <SiNextdotjs />, <SiSqlite />],
   },
 ];
 

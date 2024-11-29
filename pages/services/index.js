@@ -46,6 +46,7 @@ const Services = () => {
           >
             <ServiceSlider />
           </motion.div>
+          
         </div>
       </div>
       <Bulb />

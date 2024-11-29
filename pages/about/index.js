@@ -69,6 +69,7 @@ const aboutData = [
 
 import Avatar from '../../components/Avatar'
 import Circles from '../../components/Circles'
+import ParticlesContainer from '../../components/ParticlesContainer';
 
 const About = () => {
 
@@ -164,6 +165,7 @@ const About = () => {
         </div>
 
       </motion.div>
+      
 
     </div>
     

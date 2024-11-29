@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Gabriel Cruz - Portfólio</title>
         <meta name="description" content="Portfólio de Gabriel Cruz - Programador Full Stack" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo cruz.png" />
       </Head>
 
       <Layout>
